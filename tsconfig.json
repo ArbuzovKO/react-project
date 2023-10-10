@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": true,                // подсвечивает все места где не указан тип
+      "module": "ESNext",
+      "target": "es5",                      // в какую этмоскрипт компилируем для поддержки большенства браузеров
+      "jsx": "react-jsx",
+      "allowJs": true,                      // компилятор будет обрабатывать не только ts но и js
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "allowSyntheticDefaultImports": true, // многие библиотеки не поддерживают дефолтный импорт
+                                            // лоадеры вроде ts-loader или babel-loader создают их, вместо такого импорта
+                                            // import * as React можно писать такой
+                                            // import React в привычном стиле
+      "esModuleInterop": true,              // Позволяет работать с пакетами которые используют common js как с обычыми пакетами с помощью import require() module.export
+    },
+    "ts-node": {
+        "compilerOptions": {
+          "module": "CommonJS"
+        }
+      }
+  }
